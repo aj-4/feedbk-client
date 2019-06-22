@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './button';
+import CornerBox from './corner-box';
+
 
 const App: React.FC = () => {
+
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="corner-box">
+        <CornerBox open={open} setOpen={setOpen} />
+      </div>
+      <div className="corner-box">
+          <Button setOpen={setOpen} open={open} />
+      </div>
+    </React.Fragment>
   );
 }
 
