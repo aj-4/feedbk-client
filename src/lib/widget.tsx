@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import Button from './lib/button';
-import CornerBox from './lib/corner-box';
-
+import Button from './button';
+import CornerBox from './corner-box';
 
 const App: React.FC = () => {
 
